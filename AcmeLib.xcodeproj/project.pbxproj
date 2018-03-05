@@ -10,6 +10,7 @@
 		9E2DCB33204CC69C006BE917 /* AcmeLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2DCB29204CC69B006BE917 /* AcmeLib.framework */; };
 		9E2DCB38204CC69C006BE917 /* AcmeLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DCB37204CC69C006BE917 /* AcmeLibTests.swift */; };
 		9E2DCB3A204CC69C006BE917 /* AcmeLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2DCB2C204CC69B006BE917 /* AcmeLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E2DCB45204CC6F5006BE917 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DCB44204CC6F5006BE917 /* UITableView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9E2DCB32204CC69C006BE917 /* AcmeLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcmeLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2DCB37204CC69C006BE917 /* AcmeLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcmeLibTests.swift; sourceTree = "<group>"; };
 		9E2DCB39204CC69C006BE917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E2DCB44204CC6F5006BE917 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		9E2DCB2B204CC69B006BE917 /* AcmeLib */ = {
 			isa = PBXGroup;
 			children = (
+				9E2DCB43204CC6C0006BE917 /* UIKit */,
 				9E2DCB2C204CC69B006BE917 /* AcmeLib.h */,
 				9E2DCB2D204CC69C006BE917 /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				9E2DCB39204CC69C006BE917 /* Info.plist */,
 			);
 			path = AcmeLibTests;
+			sourceTree = "<group>";
+		};
+		9E2DCB43204CC6C0006BE917 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9E2DCB44204CC6F5006BE917 /* UITableView+Extensions.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				TargetAttributes = {
 					9E2DCB28204CC69B006BE917 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					9E2DCB31204CC69C006BE917 = {
@@ -196,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E2DCB45204CC6F5006BE917 /* UITableView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,7 @@
 		9E2DCB3E204CC69C006BE917 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rforshaw.AcmeLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +370,7 @@
 		9E2DCB3F204CC69C006BE917 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +392,7 @@
 		9E2DCB41204CC69C006BE917 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C4XKEEG85;
 				INFOPLIST_FILE = AcmeLibTests/Info.plist;
@@ -390,6 +407,7 @@
 		9E2DCB42204CC69C006BE917 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C4XKEEG85;
 				INFOPLIST_FILE = AcmeLibTests/Info.plist;
