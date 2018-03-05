@@ -11,13 +11,13 @@ import Foundation
 import Foundation
 import UIKit
 
-extension UITableView {
-  func registerCellTypeWithMatchingNibNameAndReuseIdentifier(_ type: UITableViewCell.Type) {
+public extension UITableView {
+  public func registerCellTypeWithMatchingNibNameAndReuseIdentifier(_ type: UITableViewCell.Type) {
     let nibName = String(describing: type)
     register(UINib(nibName: nibName, bundle: nil), forCellReuseIdentifier: nibName)
   }
 
-  func dequeueCellWithMatchingNibNameAndReuseIdentifier<T : UITableViewCell>(ofType type: T.Type, for indexPath: IndexPath) -> T {
+  public func dequeueCellWithMatchingNibNameAndReuseIdentifier<T : UITableViewCell>(ofType type: T.Type, for indexPath: IndexPath) -> T {
     let reuseIdentifier = String(describing: type)
     return dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! T
   }
